@@ -84,7 +84,7 @@ PYTHON_DDD/                     # Project Root
 │           └── test_borrowing_service.py   # Tests for loan services
 │
 ├── .env                      # Local environment variables
-├── .gitignore                
+├── .gitignore
 ├── .pre-commit-config.yaml   # Configuration for pre-commit hooks
 ├── README.md                 # This file
 └── requirements.txt          # Project dependencies

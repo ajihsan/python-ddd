@@ -22,19 +22,3 @@ repos:
     hooks:
       - id: isort
         args: ["--profile", "black"]
-
-  - repo: https://github.com/hadialqattan/pycln
-    rev: v2.4.0 # Possible releases: https://github.com/hadialqattan/pycln/releases
-    hooks:
-      - id: pycln
-        additional_dependencies: ["click==8.0.4"]
-
-  - repo: https://github.com/PyCQA/autoflake
-    rev: v2.0.0
-    hooks:
-      - id: autoflake
-        args:
-          - "--in-place"
-          - "--expand-star-imports"
-          - "--remove-duplicate-keys"
-          - "--remove-unused-variables"

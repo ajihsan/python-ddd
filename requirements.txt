@@ -1,6 +1,7 @@
-fastapi
-uvicorn
-sqlalchemy
-dotenv
 black
+dotenv
+fastapi
 isort
+pre-commit
+sqlalchemy
+uvicorn
