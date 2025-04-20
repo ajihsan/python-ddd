@@ -75,13 +75,13 @@ PYTHON_DDD/                     # Project Root
 │   │       └── repository.py               # Data access logic for members
 │   │
 │   ├── database.py                         # Database configuration/session management
-│   ├── main.py                             # FastAPI application entry point & setup
-│   │
-│   └── tests/                              # Unit tests
-│       ├── book/
-│       │   └── test_model.py               # Tests for book models
-│       └── loan/
-│           └── test_borrowing_service.py   # Tests for loan services
+│   └── main.py                             # FastAPI application entry point & setup
+│
+├── tests/                                  # Unit tests
+│   ├── book/
+│   │   └── test_model.py                   # Tests for book models
+│   └── loan/
+│       └── test_borrowing_service.py       # Tests for loan services
 │
 ├── .env                      # Local environment variables
 ├── .gitignore
@@ -140,14 +140,14 @@ Access the interactive API documentation (Swagger UI) at `http://127.0.0.1:8000/
 
 ## Running Tests
 
-Execute the unit tests using `pytest` from the project root directory (`PYTHON_DDD/`):
+Execute the unit tests using `unittest` from the project root directory (`PYTHON_DDD/`):
 
 ```bash
 # Make sure your virtual environment is activated
-pytest
+python -m unittest discover -s tests
 ```
 
-Pytest will automatically discover tests within the `library_service/tests/` directory.
+unittest will automatically discover tests within the `tests/` directory.
 
 ## Pre-commit Hooks
 
@@ -165,8 +165,7 @@ pre-commit run --all-files
 This project uses **GitHub Actions** for Continuous Integration. The workflow is defined in `.github/workflows/ci.yaml`. It typically includes steps to:
 * Set up Python environment.
 * Install dependencies.
-* Run linters (like `flake8`).
-* Run unit tests (`pytest`).
+* Run unit tests.
 
 This workflow is automatically triggered on events like `push` to the main branch or `pull_request` creation/updates, providing feedback on code quality and test results.
 
